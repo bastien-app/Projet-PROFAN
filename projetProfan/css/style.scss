@@ -1,0 +1,169 @@
+// --------------------------
+// VARIABLES
+// --------------------------
+$primary: #336699;
+$secondary: #e09d23;
+
+$white: #fff;
+$black: #000;
+
+$grey-95: hsl(0, 0%, 95%);
+$grey-85: hsl(0, 0%, 85%);
+$grey-60: hsl(0, 0%, 60%);
+$grey-45: hsl(0, 0%, 45%);
+$grey-30: hsl(0, 0%, 30%);
+
+
+$fs-base: 16px;
+
+// --------------------------
+// WRAPPER
+// --------------------------
+
+main {
+  min-height: calc(100vh - 150px);
+  padding: 50px 0;
+}
+
+// --------------------------
+// BOOTSTRAP OVERRIDE
+// --------------------------
+.form-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+// --------------------------
+// BUTTON
+// --------------------------
+.btn {
+  height: auto;
+  padding: 10px 20px;
+  font-size: $fs-base;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $white;
+    color: $primary;
+
+    &:hover {
+      background-color: darken($white, 10%);
+    }
+  }
+
+  &:not(.btn-primary) {
+    color: $primary;
+
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+}
+
+// --------------------------
+// header
+// --------------------------
+header {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 50px;
+    background-color: $grey-95;
+    color: $primary;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: $primary;
+    }
+  }
+}
+// --------------------------
+// footer
+// --------------------------
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: $grey-95;
+
+  img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+// --------------------------
+// MAIN
+// --------------------------
+
+.title {
+  color: $primary;
+  margin-bottom: 20px;
+}
+
+// --------------------------
+// HOMEPAGE
+// --------------------------
+
+.homepage-container {
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $grey-30;
+  background-blend-mode: overlay;
+
+  h1 {
+    font-size: 2em;
+    color: $white;
+    margin-bottom: 50px;
+
+    @media (min-width: 768px) {
+      font-size: 3em;
+    }
+  }
+
+  h2 {
+    color: $white;
+    font-size: 2em;
+  }
+
+  .links {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .btn {
+      margin-top: 30px;
+      border-width: 4px;
+
+      &:nth-child(1) {
+        color: $primary;
+        border-color: $primary;
+      }
+
+      &:nth-child(2) {
+        color: $secondary;
+        border-color: $secondary;
+      }
+    }
+  }
+}

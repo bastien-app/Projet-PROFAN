@@ -1,0 +1,33 @@
+<form action="inscription.php" method="post">
+    <div class="form-group">
+        <label for="nom_de_compte">Indentifiant</label>
+        <input class="form-control" type="text" id="nom_de_compte" name="nom_de_compte"
+               placeholder="identifiant"/>
+    </div>
+
+    <div class="form-group">
+        <label for="mot_de_passe">Password</label>
+        <input class="form-control" type="password" id="mot_de_passe" name="mot_de_passe"/>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmation_mot_de_passe"> Confirmation de Password</label>
+        <input class="form-control" type="password" id="confirmation_mot_de_passe"
+               name="confirmation_mot_de_passe"/>
+    </div>
+
+    <div class="form-group">
+        <label for="mail">email</label>
+        <input class="form-control" type="email" id="mail" name="mail"/>
+    </div>
+
+    <div class="form-group">
+        <label for="droit">droit</label>
+        <input class="form-control" type="number" id="droit" name="droit" min="0" max="2"/>
+    </div>
+
+    <div class="form-inline">
+        <button type="submit" class="btn btn-primary">Valider</button>
+        <a class="btn" href="index.php">Retour</a>
+    </div>
+</form>
